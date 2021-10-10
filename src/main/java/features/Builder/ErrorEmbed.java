@@ -6,6 +6,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import java.awt.*;
 
 public class ErrorEmbed {
+
     public static MessageEmbed ErrorBuild(String title, String thumnail, String description) {
         return new EmbedBuilder()
                 .setColor(Color.RED)

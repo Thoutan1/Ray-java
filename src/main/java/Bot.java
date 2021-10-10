@@ -2,6 +2,9 @@ import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.general.PingCommand;
 import commands.general.SayCommand;
+import commands.general.StatsCommand;
+import commands.moderation.ClearCommand;
+import commands.owner.EvalCommand;
 import event.HelloPrint;
 import event.MessageReceived;
 import logger.LogLevel;
@@ -44,6 +47,9 @@ public class Bot extends ListenerAdapter
         client.addCommands(
                 // command to show information about the bot
                 new SayCommand(),
+               new EvalCommand(),
+               new StatsCommand(),
+               new ClearCommand(),
                new PingCommand());
 
         JDABuilder.createLight(token, GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES)

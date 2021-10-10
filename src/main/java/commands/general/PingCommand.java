@@ -10,6 +10,7 @@ public class PingCommand extends Command {
     public PingCommand(){
         this.name = "ping";
         this.help = "reports latency to the API";
+        this.cooldown = 5;
         this.guildOnly = false;
     }
 
